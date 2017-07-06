@@ -1,0 +1,1 @@
+AQS,非阻塞数据结构和原子变量类（java.util.concurrent.atomic包中的类），这些concurrent包中的基础类都是使用这种模式来实现的（使用CAS的原子条件更新来实现线程之间的同步，同时，使用以volatile的读/写和CAS所具有的volatile读和写的内存语义来实现线程之间的通信）
