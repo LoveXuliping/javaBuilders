@@ -7,9 +7,9 @@ private void init(ThreadGroup g,Runnable target,String name,long stackSize){
 		Thread parent = currentThread();
 		this.group = g;
 		//将daemon,priority属性设置为父线程的对应属性
-		this.daemon = parent.isDaemon();
-		this.priority = parent.getPriority;
-		this.name = name.toCharArray();
+		this.daemon = parent.isDaemon();//说明是来自于父线程的
+		this.priority = parent.getPriority;//说明来自于父线程的
+		this.name = name.toCharArray();//起名字以方便用jstack进行查看
 		this.target = target;
 		setPriority(priority);
 		//将父线程的InheritableThreadLocal复制过来
