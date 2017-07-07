@@ -28,6 +28,7 @@ public class Daemon {
 			//实现run方法
 			try{SleepUtils.second(10);}
 			finally{
+				/*证明不能依靠finally来确保执行的关闭和清除资源的逻辑*/
 			System.out.println("DaemonThread finally run.");}
 			
 		}
