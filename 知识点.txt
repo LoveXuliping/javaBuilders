@@ -1,3 +1,6 @@
 AQS,非阻塞数据结构和原子变量类（java.util.concurrent.atomic包中的类），这些concurrent包中的基础类都是使用这种模式来实现的（使用CAS的原子条件更新来实现线程之间的同步，同时，使用以volatile的读/写和CAS所具有的volatile读和写的内存语义来实现线程之间的通信）
 
 线程之间的通信，通过对象的wait和notify方法进行，wait方法让当前线程进入等待队列，并释放锁，而另外的线程获得锁之后，改变原来的条件之后，调用notify会notifyAll通知线程，等到当前线程释放锁之后，改变了值，原来的wait方法的线程返回之后继续获得锁，进行线程执行
+
+线程池和连接池的实现，全靠线程之间的通信，而就是对象的wait方法和notify方法，synchronized的对象通过对象的wait方法和notify方法进行线程之间的通信
+
