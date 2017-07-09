@@ -8,6 +8,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * @author Administrator
  *利用CountDownLatch工具
+ *CountDownLatche的wait方法会阻止线程，直到计数器编程0
  */
 public class CountDownLatchTest {
 
